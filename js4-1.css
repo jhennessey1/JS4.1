@@ -1,0 +1,23 @@
+.header {
+	position: fixed;
+	width: 95%;
+	border-bottom: 2px solid orange;
+}
+
+.navbar {
+	text-align: right;
+}
+
+.nav {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.main-content {
+	margin-top: 75px;
+
+}
+
+.moused {
+	color: pink;
+}
