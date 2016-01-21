@@ -2,6 +2,8 @@
 	position: fixed;
 	width: 95%;
 	border-bottom: 2px solid orange;
+	top: 0;
+	margin: 8px;
 }
 
 .navbar {
@@ -14,10 +16,11 @@
 }
 
 .main-content {
-	margin-top: 75px;
+	margin-top: 115px;
 
 }
 
-.moused {
+.pink {
 	color: pink;
 }
+

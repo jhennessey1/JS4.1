@@ -22,39 +22,39 @@
 </html> -->
 
 <!DOCTYPE html>
-<html>
+<html ng-app='hotMod'>
 	<head>
 		<title>Part 2</title>
 		<link rel="stylesheet" href="js4-1.css"/>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
-		<script type="text/javascript" href="js4-1.js"></script>
+		<script type="text/javascript" src="js4-1.js"></script>
 	</head>
-	<body ng-app="modDamn">
+	<body ng-controller='hotRoller'>
 		<div class="header">
 			<ul class="navbar">
-				<li class="nav"><a href="#">Exercises</a></li>
-				<li class="nav"><a href="#">Program</a></li>
-				<li class="nav"><a href="#">Resources</a></li>
+				<li class="nav"><a href="http://google.com" ng-click="linkClick($event, 'exercises')" ng-hide="hideLinkExercises">Exercises</a></li>
+				<li class="nav"><a href="#" ng-click="linkClick($event, 'program')" ng-hide="hideLinkProgram">Program</a></li>
+				<li class="nav"><a href="#" ng-click="linkClick($event, 'resources')" ng-hide="hideLinkResources">Resources</a></li>
 			</ul>
 		</div>
-		<h1>Filler Page</h1>
+		<h1>Filler Page{{addPoint}}</h1>
 		<div class="main-content">
-			<h1>JS4.1: Intro to Angular</h1>
-			<h1>Skills</h1>
+			<h1>JS4.1: Intro to Angular{{addPoint}}</h1>
+			<h1>Skills{{addPoint}}</h1>
 			<ul>
 				<li>Angular</li>
 				<li>Binding Data to the Dom</li>
 				<li>Event Handling</li>
 			</ul>
-			<h1>Requirements</h1>
-			<h2>Part I</h2>
+			<h1>Requirement{{addPoint}}</h1>
+			<h2>Part I{{addPoint}}</h2>
 			<ol>
 				<li>Create an HTML page</li>
 				<li>Add an ng-click directive</li>
 				<li>Change the behavior</li>
 				<li>Add another button</li>
 			</ol>
-			<h2>Part II</h2>
+			<h2>Part II{{addPoint}}</h2>
 			<ol>
 				<li>Create an HTML page</li>
 				<li>When a paragraph is moused over, do some shit.</li>
@@ -62,13 +62,13 @@
 				<li>When a link is clicked, confirm that the user wants to navigate to that page</li>
 				<li>When a link is clicked, make it disappear or something.</li>
 			</ol>
-			<h2>Part III</h2>
+			<h2>Part III{{addPoint}}</h2>
 			<ol>
 				<li>Create an HTML page</li>
 				<li>When the giant button is clicked, make a popup</li>
 				<li>Add a close button to the popup</li>
 			</ol>
-			<p ng-class="{moused: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.</p>
+			<p ng-class="{ pink : paragraphPink }" ng-mouseEnter="addPink()" ng-mouseLeave="removePink()">Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.</p>
 		</div>
 	</body>
 </html>

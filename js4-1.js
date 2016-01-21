@@ -12,12 +12,41 @@
 // 	}
 // }])
 
-angular.module('modDamn' []);
+angular.module('hotMod', [])
 
-angular.module('modDamn')
-	.controller('modRoller', ['$scope', function($scope) {
+angular.module('hotMod').controller('hotRoller', ['$scope', function($scope) {
+		$scope.addPink = function() {
+			$scope.paragraphPink = true
+		}
+		$scope.removePink = function(){
+			$scope.paragraphPink = false
+		}
 
-		$scope.mousey = function(){
-			
+		$scope.addPoint = '!'
+
+		$scope.hideLinkExercises = false
+		$scope.hideLinkProgram = false
+		$scope.hideLinkResources = false
+
+		$scope.linkClick = function(event, which) {
+			if(which === 'exercises') {
+
+				if(!confirm("Are you sure?")) {
+					event.preventDefault()
+					$scope.hideLinkExercises = true
+				}
+			}
+			else if(which === 'program') {
+				if(!confirm("Are you sure?")) {
+					event.preventDefault()
+					$scope.hideLinkProgram = true
+				}
+			}
+			else if(which === 'resources') {
+				if(!confirm("Are you sure?")) {
+					event.preventDefault()
+					$scope.hideLinkResources = true
+				}
+			}
 		}
 	}])
