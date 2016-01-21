@@ -50,3 +50,24 @@
 // 			}
 // 		}
 // 	}])
+
+angular.module('popupMod', [])
+
+angular.module('popupMod').controller('popupRoller', ['$scope', function($scope){
+	$scope.hidePopup = true 
+	$scope.popup = function(event) {
+		$scope.hidePopup = !$scope.hidePopup
+	}
+}])
+
+
+
+
+
+
+
+
+
+
+
+

@@ -74,18 +74,23 @@
 </html> -->
 
 <!DOCTYPE html>
-<html>
+<html ng-app="popupMod">
 	<head>
 		<title>Part 3</title>
 		<link rel='stylesheet' href='js4-1.css'/>
 		<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js'></script>
 		<script type='text/javascript' src='js4-1.js'></script>
 	</head>
-	<body>
-		<div class='buttonBox'>
+	<body ng-controller="popupRoller" class="bigBody">
+		<div class='buttonBox' ng-click="popup($event)">
 			<h2>Look at this big ass button!</h2>
 			<h3>Click it...</h3>
 			<button class='button'><h1>Click!</h1></button>
+		</div>
+		<div class="popup" ng-hide="hidePopup">
+			<h1>Samuel L. Ipsum!</h1>
+			<p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.</p>
+			<button ng-click="popup()">Close</button>
 		</div>
 	</body>
 </html>
