@@ -1,4 +1,5 @@
-.header {
+/*Part 2!!*/
+/*.header {}
 	position: fixed;
 	width: 95%;
 	border-bottom: 2px solid orange;
@@ -22,5 +23,19 @@
 
 .pink {
 	color: pink;
+}*/
+
+.buttonBox {
+	width: 50%;
+	height: 50vh;
+	margin: 25vh 25%;
+	text-align: center;
+	background-color: orange;
+	border-radius: 15px;
 }
 
+.button {
+	background-color: blue;
+	vertical-align: middle;
+	color: white;
+}
